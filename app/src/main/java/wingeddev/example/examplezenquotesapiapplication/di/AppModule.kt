@@ -35,4 +35,5 @@ object AppModule {
     fun provideDailyQuoteUseCase(repository: ZenQuotesRepository): GetDailyQuoteUseCase {
         return GetDailyQuoteUseCase(repository)
     }
+
 }

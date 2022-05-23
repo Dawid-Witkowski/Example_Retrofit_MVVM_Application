@@ -1,5 +1,4 @@
 package wingeddev.example.examplezenquotesapiapplication.presentation.mainActivity
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
