@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ExampleZenQuotesApiApplication</string>
+    <string name="copied">Copied!</string>
 </resources>

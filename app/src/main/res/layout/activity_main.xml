@@ -4,31 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_background"
     tools:context=".presentation.mainActivity.MainActivity">
+
+    <TextView
+        android:id="@+id/quoteTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copyTV"
+        tools:text='I can think of nothing less pleasurable than a life devoted to pleasure."' />
 
     <TextView
         android:id="@+id/authorTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/quoteTV"
+        app:layout_constraintTop_toBottomOf="@+id/quoteTV"
+        tools:text='John D. Rockefeller' />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="365dp" />
+        app:layout_constraintGuide_begin="32dp" />
 
     <TextView
-        android:id="@+id/quoteTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/copyTV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/interactive"
+        android:gravity="center"
+        android:text="@string/copied"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/interactive"
+        android:text="@android:string/copy"
+        android:textColor="@android:color/black"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/quoteTV"
+        app:layout_constraintStart_toStartOf="@+id/quoteTV" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

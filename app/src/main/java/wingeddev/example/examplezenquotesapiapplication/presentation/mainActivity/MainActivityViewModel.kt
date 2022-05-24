@@ -44,7 +44,7 @@ class MainActivityViewModel @Inject constructor(
                 is Resource.Loading -> {
                     observableMutableLiveData.postValue(
                         listOf(
-                            Quote("Winged Dev", result.message)
+                            Quote("", "")
                         )
                     )
                 }
